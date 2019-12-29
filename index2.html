@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="main.js" defer></script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .fullPageScroll{
+      width: 100%;
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+    .main__head,.main__body{
+      scroll-snap-align: start;
+    }
+    .section{
+      width: 100%;
+      height: 100vh;
+      padding: 10%;
+    }
+    .main__body .section{
+      height: 200vh;
+    }
+    .section1{
+      background-color: blue;
+    }
+    .section2{
+      background-color: yellow;
+    }
+    .section3{
+      background-color: deeppink;
+    }
+    .section4{
+      background-color: mediumslateblue;
+    }
+    .section5{
+      background-color: midnightblue;
+    }
+    .pagination{
+      position: fixed;
+      top: 50%;
+      right: 32px;
+      transform: translateY(-50%);
+    }
+    .pagination a {
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 24px 0;
+      border-radius: 50%;
+      background-color: #fcfcfc;
+      transition: transform 0.2s;
+    }
+    .pagination a.active{
+      transform: scale(1.8);
+    }
+  </style>
+</head>
+<body>
+  <main class="fullPageScroll">
+    <section id="section1" class="main__head section section1">
+
+    </section>
+    <div class="main__body">
+      <section>
+          <section id="section2" class="section section2">
+      
+          </section>
+          <section id="section3" class="section section3">
+      
+          </section>
+          <section id="section4" class="section section4">
+      
+          </section>
+          <section id="section5" class="section section5">
+      
+          </section>
+      </section>
+    </div>
+    <nav id="pagination" class="pagination">
+      <a href="#section1" id="pagination1"></a>
+      <a href="#section2" id="pagination2"></a>
+      <a href="#section3" id="pagination3"></a>
+      <a href="#section4" id="pagination4"></a>
+      <a href="#section5" id="pagination5"></a>
+    </nav>
+  </main>
+
+</body>
+</html>
